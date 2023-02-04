@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="exercise1.1" />
+        <module name="exercises3.1" />
+        <module name="exercises2.1" />
+        <module name="exercises3.2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="exercise1.1" target="17" />
+      <module name="exercise2.1" target="1.7" />
+      <module name="exercises2.1" target="17" />
+      <module name="exercises3.1" target="17" />
+      <module name="exercises3.2" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
