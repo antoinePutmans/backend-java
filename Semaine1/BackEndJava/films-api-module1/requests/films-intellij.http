@@ -1,0 +1,34 @@
+### Read All texts
+GET {{baseUrl}}/texts
+
+### Create One text
+POST {{baseUrl}}/texts
+Content-Type: application/json
+
+{
+  "content" : "dazmdza",
+  "level" : "high"
+}
+
+### Delete One film
+DELETE {{baseUrl}}/texts/1
+
+### Update One film
+PUT {{baseUrl}}/texts/2
+Content-Type: application/json
+
+{
+  "content" : "dazmdza",
+  "level" : "high"
+}
+
+### Create One film with dangerous characters
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+  "title" : "<img src=\"#\" onerror=\"alert('You have been hacked !')\">",
+  "duration" : 9,
+  "budget" : 110,
+  "link" : "https://en.wikipedia.org/wiki/Venom:_Let_There_Be_Carnage"
+}

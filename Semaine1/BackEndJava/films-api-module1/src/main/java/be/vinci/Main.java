@@ -2,6 +2,7 @@ package be.vinci;
 
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
+import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class Main {
      */
     public static HttpServer startServer() {
         // create a resource config that scans for JAX-RS resources and providers
-        // in be.vinci package
+        // in vinci.be package
         final ResourceConfig rc = new ResourceConfig().packages("be.vinci");
 
         // create and start a new instance of grizzly http server
@@ -36,8 +37,8 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
         final HttpServer server = startServer();
-        System.out.println(String.format("Jersey app started with endpoints available at "
-                + "%s%nHit Ctrl-C to stop it...", BASE_URI));
+        System.out.println(String.format("Jersey app started with WADL available at "
+                + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));
         System.in.read();
         server.stop();
     }
