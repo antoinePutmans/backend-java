@@ -5,16 +5,7 @@ import java.util.Objects;
 public class Text {
 
 
-    public Text() {
-    }
 
-    public Text(int id, String content, String level) {
-        this.id = id;
-        this.content = content;
-        if (!level.equalsIgnoreCase("low") && !level.equalsIgnoreCase("medium") && !level.equalsIgnoreCase("high"))
-            throw new IllegalArgumentException();
-        this.level = level;
-    }
 
     private int id;
 

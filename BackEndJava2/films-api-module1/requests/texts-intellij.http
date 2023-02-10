@@ -1,0 +1,33 @@
+### Read All texts
+GET {{baseUrl}}/texts
+
+### Create One text
+POST {{baseUrl}}/texts
+Content-Type: application/json
+Authorization: {{jamesToken}}
+{
+  "content" : "dazmdza",
+  "level" : "high"
+}
+
+
+### Delete One film
+DELETE {{baseUrl}}/texts/6
+
+### Update One film
+PUT {{baseUrl}}/texts/2
+Content-Type: application/json
+
+{
+  "content" : "dazmdza",
+  "level" : "high"
+}
+
+### Create One film with dangerous characters
+POST {{baseUrl}}/texts
+Content-Type: application/json
+
+{
+  "content" : "<img src=\"#\" onerror=\"alert('You have been hacked !')\">",
+  "level" : "high"
+}

@@ -15,7 +15,9 @@ Content-Type: application/json
   "login":"james",
   "password":"password"
 }
-
+> {%
+client.global.set("jamesToken", response.body.token);
+%}
 ### Register john
 POST {{baseUrl}}/auths/register
 Content-Type: application/json
