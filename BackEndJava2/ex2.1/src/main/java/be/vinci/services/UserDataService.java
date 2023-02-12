@@ -6,6 +6,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.glassfish.grizzly.http.server.Session;
 
 import java.util.List;
 
@@ -66,7 +67,6 @@ public class UserDataService {
             return null;
         }
     }
-
     public ObjectNode register(String login, String password) {
         User tempUser = getOne(login);
         if (tempUser != null) // the user already exists !

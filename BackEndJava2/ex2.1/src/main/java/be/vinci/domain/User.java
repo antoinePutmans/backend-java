@@ -2,6 +2,8 @@ package be.vinci.domain;
 
 import org.mindrot.jbcrypt.BCrypt;
 
+import java.util.Properties;
+
 public class User {
 
     private int id;

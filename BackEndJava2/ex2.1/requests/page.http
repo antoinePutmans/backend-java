@@ -1,0 +1,3 @@
+### Get all pages
+GET {{baseUrl}}/pages
+Content-Type: application/json

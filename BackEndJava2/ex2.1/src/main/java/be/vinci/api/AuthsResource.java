@@ -27,7 +27,7 @@ public class AuthsResource {
         String login = json.get("login").asText();
         String password = json.get("password").asText();
 
-        // Try to login
+        // Try to log in
         ObjectNode publicUser = myUserDataService.login(login, password);
         if (publicUser == null) {
             throw new WebApplicationException(Response.status(Response.Status.UNAUTHORIZED)

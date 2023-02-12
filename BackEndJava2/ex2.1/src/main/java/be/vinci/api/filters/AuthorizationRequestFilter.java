@@ -28,6 +28,7 @@ public class AuthorizationRequestFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
         String token = requestContext.getHeaderString("Authorization");
+        System.out.println(token);
         if (token == null) {
             requestContext.abortWith(Response.status(Status.UNAUTHORIZED)
                     .entity("A token is needed to access this resource").build());

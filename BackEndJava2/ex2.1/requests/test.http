@@ -1,0 +1,46 @@
+### Register one default user
+POST {{baseUrl}}/auths/register
+Content-Type: application/json
+
+{
+  "login":"james",
+  "password":"password"
+}
+
+### Login with default user credentials
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+  "login":"james",
+  "password":"password"
+}
+
+> {%
+client.global.set("jamesToken", response.body.token);
+%}
+
+### Register john
+POST {{baseUrl}}/auths/register
+Content-Type: application/json
+
+{
+  "login":"john",
+  "password":"123"
+}
+
+### Login with John credentials
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+  "login":"john",
+  "password":"123"
+}
+
+
+### Get all pages
+GET {{baseUrl}}/pages
+Content-Type: application/json
+Authorization: {{jamesToken}}
+
