@@ -1,0 +1,47 @@
+### Register one default user
+POST {{baseUrl}}/auths/register
+Content-Type: application/json
+
+{
+  "login": "james",
+  "password": "password"
+}
+
+### Login with default user credentials
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+  "login": "james",
+  "password": "password"
+}
+
+### Register john
+POST {{baseUrl}}/auths/register
+Content-Type: application/json
+
+{
+  "login": "john",
+  "password": "123"
+}
+
+### Login with John credentials
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "login": "john",
+  "password": "123"
+}
+
+### Test the TokenDecoding Exception
+POST {{baseUrl}}/films
+Content-Type: application/json
+Authorization: {{jamesToken}}modifiedtoken
+
+{
+  "title": "Venom: Let There Be Carnage",
+  "duration": 9,
+  "budget": 110,
+  "link": "https://en.wikipedia.org/wiki/Venom:_Let_There_Be_Carnage"
+}
